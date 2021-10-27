@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+int choices, price , payment, change;
+
+printf("please pick you favorite order:\n");
+
+printf("1 Pepsi(75)\n");
+printf("2 pizza (100)\n");
+printf("3 cake (350)\n");
+printf("your choice:");
+scanf("%c", &choices);
+
+switch (choices){
+
+  case'1':
+  price =75;
+  printf("please input payment:");
+  scanf("%d",&payment);
+  if(payment>=price){
+  printf("success! Enjoy your pepsi sir/ma'am.\n ");
+  change=payment-price;
+  printf("\nchange: d%,\n");
+  }
+  else
+  {
+    printf("apparently you do not have enough money");
+  }
+break;
+
+case '2':
+price =100;
+printf("please input payment");
+scanf("%d", &payment);
+if (payment>=price){
+  printf("n your pizza Sir/Ma'am.\n");
+  change =payment-price;
+}
+else{
+  printf("apparently you do not have enough money");
+}
+
+break;
+case 3:
+price =69;
+printf(" Please input payment:");
+scanf("%d", &payment);
+if(payment>=price){
+printf(" success enjoy your cake sir/ma'am. \n");
+change = payment-price;
+printf("\nchange: %d\n",change);
+}
+else{
+  printf("apparently you dont have enough money");
+  }
+  break;
+
+  default:
+  printf("invalid input");
+}
+  return 0;
+  }
